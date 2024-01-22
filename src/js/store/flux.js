@@ -38,6 +38,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			}
+
+			/*getContacts () => {
+				fetch ('https://playground.4geeks.com/apis/fake/contact/agenda/sprdesign')
+
+			}*/
 		}
 	};
 };
