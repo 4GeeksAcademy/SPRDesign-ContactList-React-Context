@@ -14,14 +14,12 @@ export const AddContact = () => {
 
     
     const handleChange = (e) => {
-        setContactData({ ...contactData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setContactData({ ...contactData, [name]: value });
     };
-
     
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        navigate("/ContactCard");
+    const handleSubmit = () => {
+        AddContact(contactData);
     };
 
     return (
@@ -43,7 +41,6 @@ export const AddContact = () => {
                     <label>Phone</label>
                     <input type="tel" name="phone" value={contactData.phone} onChange={handleChange} required />
                 </div>
-
                 
 
                 <button type="submit" lang="en">{contactData.id ? "Update Contact" : "Add Contact"}</button>
