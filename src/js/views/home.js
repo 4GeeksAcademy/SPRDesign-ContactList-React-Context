@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 import { ContactCard } from "../component/ContactCard";
@@ -6,11 +6,16 @@ import { Context } from "../store/appContext";
 
 export const Home = () => {
 	const { actions, store } = useContext(Context)
+	const contacts = store.contacts
 
+	useEffect (() => {
+		actions.getContacts()
+
+	}, [contacts])
 
 	return (
 		<div className="text-center mt-3 central-container">
-			<div>Your Contacts
+			<div>
 				<ul>
 					{store.contacts.map((contact, index) => {
 						return (

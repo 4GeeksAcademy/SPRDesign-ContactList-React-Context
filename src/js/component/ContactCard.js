@@ -11,8 +11,8 @@ export const ContactCard = ({ contact }) => {
     <div className="contact-card">
       <h2>{full_name}</h2>
       <p>Email: {email}</p>
-      <p>Dirección: {address}</p>
-      <p>Teléfono: {phone}</p>
+      <p>Adress: {address}</p>
+      <p>Phone: {phone}</p>
     </div>
   );
 };
