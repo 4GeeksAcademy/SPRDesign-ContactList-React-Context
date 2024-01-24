@@ -1,3 +1,5 @@
+import { resolvePath } from "react-router";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -12,7 +14,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			], 
+			contacts:[],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -60,24 +63,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 			
-			addContacts: () => {
-				const store = getStore();
-				const url = "https://playground.4geeks.com/apis/fake/contact/agenda/sprdesign";
+			addContacts: (contactData) => {
+				
+				const url = "https://playground.4geeks.com/apis/fake/contact/";
 				const request = {
-					method: "PUT",
+					method: "POST",
 					headers: {
 						'Content-Type': 'application/json'
-					}
+					},
+					body: JSON.stringify(contactData)
 				};
 			
 				fetch(url, request)
 					.then(resp => {
-						if (!resp.ok) throw Error(res.statusText);
+						if (!resp.ok) throw Error(resp.statusText);
 						return resp.json();
 					})
 					.then(data => {
 						console.log(data);
-						setStore({ contacts: data });
+						resolve("Operación Exitosa")
 					})
 					.catch(error => {
 						console.log(error);

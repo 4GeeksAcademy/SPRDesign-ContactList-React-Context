@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 
-const ContactCard = ({ contact }) => {
+export const ContactCard = ({ contact }) => {
   const { full_name, email, address, phone } = contact;
 
   return (
@@ -17,4 +17,4 @@ const ContactCard = ({ contact }) => {
   );
 };
 
-export default ContactCard;
+
