@@ -6,13 +6,8 @@ import { Context } from "../store/appContext";
 
 export const Home = () => {
 	const { actions, store } = useContext(Context)
-	const contacts = store.contacts
-
-	useEffect (() => {
-		actions.getContacts()
-
-	}, [contacts])
-
+	
+	
 	return (
 		<div className="text-center mt-3 central-container">
 			<div>
@@ -28,12 +23,7 @@ export const Home = () => {
 
 			</div>
 
-			<div className="text-center mt-5">
-
-				<Link to="/AddContact" className="btn btn-success navbar-button">Add Contact</Link>
-
-
-			</div>
+			
 
 		</div>
 

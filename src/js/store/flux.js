@@ -14,8 +14,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			], 
-			contacts:[],
+			],
+			contacts: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -46,7 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch ('https://playground.4geeks.com/apis/fake/contact/agenda/sprdesign')
 			}*/
 			getContacts: () => {
-							
+
 				fetch("https://playground.4geeks.com/apis/fake/contact/agenda/sprdesign")
 					.then(resp => {
 						if (!resp.ok) throw Error(resp.statusText);
@@ -54,7 +54,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => {
 						console.log(data);
-			
+
 						// Set the retrieved contacts data in the store
 						setStore({ contacts: data });
 					})
@@ -62,9 +62,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log(error);
 					});
 			},
-			
+
 			addContacts: (contactData) => {
-				
+
 				const url = "https://playground.4geeks.com/apis/fake/contact/";
 				const request = {
 					method: "POST",
@@ -73,7 +73,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					},
 					body: JSON.stringify(contactData)
 				};
-			
+
 				fetch(url, request)
 					.then(resp => {
 						if (!resp.ok) throw Error(resp.statusText);
@@ -81,16 +81,42 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => {
 						console.log(data);
-						resolve("Operación Exitosa")
+						getActions().getContacts();
 					})
 					.catch(error => {
 						console.log(error);
 					});
 			},
 
+			deleteContacts: (id) => {
+				const url = `https://playground.4geeks.com/apis/fake/contact/${id}`;
+				const request = {
+					method: "DELETE",
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					
+				};
+
+				fetch(url, request)
+					.then(resp => {
+						if (!resp.ok) throw Error(resp.statusText);
+						return resp.json();
+					})
+					.then(data => {
+						console.log(data);
+						getActions().getContacts();
+					})
+					.catch(error => {
+						console.log(error);
+					});
 			},
-		}
-	};
+
+
+
+		},
+	}
+};
 
 
 export default getState;

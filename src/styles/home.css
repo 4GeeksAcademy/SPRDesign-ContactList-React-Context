@@ -1,10 +1,12 @@
 body {
-    width: 600px;
+    width: 800px;
     margin: auto;
-    background-image: url('https://img.freepik.com/vector-gratis/estilo-3d-que-fluye-fondo-ondulado-blanco-dorado_1017-26584.jpg?w=740&t=st=1705868679~exp=1705869279~hmac=13b04c2c8a724020f6e03ef4f0af64abf89dfd629010f8cd31541246a3c6e160');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: #969291;
+    background: -webkit-linear-gradient(to right, #b4afad, #3c3c3d);
+    background: linear-gradient(to right, #b9b5b3, #373738);
+    min-height: 100vh;
 }
+
 
 .navbar-container {
     margin-top: 20px;
@@ -12,9 +14,8 @@ body {
     padding: 10px;
     border: 3px solid transparent;
     border-width: 3px;
-    border-image: radial-gradient(ellipse at center, #FEDB37 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
-    border-image-slice: 1;
     border-radius: 10px;
+    
 }
 
 h3 {
@@ -30,13 +31,11 @@ h3 {
 .central-container {
     text-align: center;
     padding: 20px;
-    min-width: 200px;
+  
     min-height: 430px;
     background-color: white;
-    border: 3px solid transparent;
+    
     border-width: 3px;
-    border-image: radial-gradient(ellipse at center, #FEDB37 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
-    border-image-slice: 1;
     border-radius: 10px;
 }
 
@@ -51,16 +50,15 @@ h3 {
 }
 
 .contact-form {
-    max-width: 600px;
     width: 100%;
     padding: 20px; 
     border: 3px solid transparent;
     border-width: 3px;
-    border-image: radial-gradient(ellipse at center, #FEDB37 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
-    border-image-slice: 1;
+    
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
+    margin-top: 10px;
 }
 
 .form-group {
@@ -78,7 +76,7 @@ input {
     padding: 8px;
     border: 3px solid transparent;
     border-width: 3px;
-    border-image: radial-gradient(ellipse at center, #FEDB37 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
+    border-image: radial-gradient(ellipse at center, #272725 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
     border-image-slice: 1;
     border-radius: 10px;
     border-radius: 5px;
