@@ -23,10 +23,11 @@ body {
     margin-top: 20px;
     background-color: white;
     padding: 10px;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     border-radius: 10px;
     border-image: radial-gradient(ellipse at center, #272725 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
     border-image-slice: 1;
+    box-shadow: 0 4px 8px rgba(39, 39, 39, 0.15), 0 6px 20px rgba(39, 39, 39, 0.25); 
 }
 
 h3 {
@@ -39,7 +40,29 @@ h3 {
         radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
 
-/* En tu archivo de estilos CSS o en línea */
+/* Card */
+
+.contact-card-border {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    border-image: radial-gradient(ellipse at center, #272725 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
+    border-image-slice: 1;
+    box-shadow: 0 4px 8px rgba(39, 39, 39, 0.15), 0 6px 20px rgba(39, 39, 39, 0.25); 
+  }
+  
+.icon-button {
+    padding:  5px; /* Ajusta el padding según tu preferencia */
+    font-size: 14px; /* Ajusta el tamaño de fuente según tu preferencia */
+    border-color: transparent;
+    color: white;
+  }
+  
+.icons {
+    color: #9f7928;
+    
+    
+}
+
 .icons-margin-left {
     margin-left: 10px; /* Puedes ajustar el valor según tus necesidades */
   }
@@ -49,39 +72,65 @@ h3 {
   }
 
 
+  .image-circle {
+    justify-content: center;
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     border-top: 2px solid #fafaf9; 
+     border-right: 2px solid#fffefd; 
+     border-left: 2px solid #ceaf67;
+     border-bottom: 2px solid #d3b060;
+     padding: 0px;
+     animation: spin 10s infinite linear;
+ }
+ 
+ 
+ 
+ .image-circle img {justify-content: center;
+     animation: spin 10s infinite reverse linear;
+     width: 100%;
+     border-radius: 50%;
+ }
+ 
+ 
+ @keyframes spin {
+     100% {
+         transform: rotate(1turn);
+     }
+ }
 
 
 
 
-  
+
+
+
+/* Form */
 
 .contact-form {
     width: 100%;
     padding: 20px;
-    border: 3px solid transparent;
-    border-width: 3px;
-
-    border-radius: 10px;
+    border: 2px solid transparent;
+    border-width: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
-    margin-top: 10px;
+    margin-top: 20px;
+    border-image: radial-gradient(ellipse at center, #272725 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
+    border-image-slice: 1;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .form-group {
     margin-bottom: 15px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
 input {
     width: 100%;
     padding: 8px;
-    border: 3px solid transparent;
-    border-width: 3px;
+    border: 2px solid transparent;
+    border-width: 2px;
     border-image: radial-gradient(ellipse at center, #272725 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
     border-image-slice: 1;
     border-radius: 10px;
@@ -95,11 +144,16 @@ button {
     padding: 10px;
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
         radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
+
+
+  
+
+
 
