@@ -1,10 +1,35 @@
 body {
-    width: 800px;
+    width: 900px;
     margin: auto;
-    background: #969291;
-    background: -webkit-linear-gradient(to right, #b4afad, #3c3c3d);
-    background: linear-gradient(to right, #b9b5b3, #373738);
+    background-image: url(https://img.freepik.com/vector-gratis/estilo-3d-que-fluye-fondo-ondulado-blanco-dorado_1017-26584.jpg?w=740&t=st=1706367046~exp=1706367646~hmac=715d4650e0a80b583efd8a60ad7cfa6638c4dd0b9b7d1a7f200d943c0d528f4f);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
+    animation: moveBackground 20s linear infinite; 
+}
+
+@keyframes moveBackground {
+    0%, 100% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+}*/
+
+/* home.css */
+/* home.css */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.contact-card {
+    flex: 0 0 calc(30% - 10px); /* Ajusta el ancho según tus necesidades */
+    
 }
 
 
@@ -13,9 +38,9 @@ body {
     background-color: white;
     padding: 10px;
     border: 3px solid transparent;
-    border-width: 3px;
     border-radius: 10px;
-    
+    border-image: radial-gradient(ellipse at center, #272725 0%, #FDB931 20%, #9f7928 50%, #8A6E2F 80%, transparent 110%);
+    border-image-slice: 1;
 }
 
 h3 {
@@ -25,36 +50,27 @@ h3 {
 
 .navbar-button {
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
 
-.central-container {
-    text-align: center;
-    padding: 20px;
-  
-    min-height: 430px;
-    background-color: white;
-    
-    border-width: 3px;
-    border-radius: 10px;
-}
+/* En tu archivo de estilos CSS o en línea */
+.icons-margin-left {
+    margin-left: 10px; /* Puedes ajustar el valor según tus necesidades */
+  }
+
+  .text-margin-left {
+    margin-left: 20px; /* Puedes ajustar el valor según tus necesidades */
+  }
 
 
 
-.contact-card-container {
-    
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin-top: 10px;
-}
 
 .contact-form {
     width: 100%;
-    padding: 20px; 
+    padding: 20px;
     border: 3px solid transparent;
     border-width: 3px;
-    
+
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
@@ -88,7 +104,7 @@ button {
     width: 100%;
     padding: 10px;
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -96,5 +112,4 @@ button {
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
-
 
