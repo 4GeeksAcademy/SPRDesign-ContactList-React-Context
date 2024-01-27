@@ -16,20 +16,6 @@ body {
     50% {
         background-position: 0% 0%;
     }
-}*/
-
-/* home.css */
-/* home.css */
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-}
-
-.contact-card {
-    flex: 0 0 calc(30% - 10px); /* Ajusta el ancho según tus necesidades */
-    
 }
 
 
@@ -64,6 +50,10 @@ h3 {
 
 
 
+
+
+
+  
 
 .contact-form {
     width: 100%;

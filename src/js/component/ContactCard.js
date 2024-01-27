@@ -38,12 +38,12 @@ export const ContactCard = ({ contact }) => {
         <div className="row mt-3">
           <div className="col-md-6">
             <button className="btn btn-primary" style={{ borderColor: "transparent" }}>
-              <i className="far fa-edit" /> Edit
+              <i className="far fa-edit" /> 
             </button>
           </div>
           <div className="col-md-6">
             <button className="btn btn-danger" style={{ borderColor: "transparent" }} onClick={() => actions.deleteContacts(contact.id)}>
-              <i className="fas fa-trash-alt" /> Delete
+              <i className="fas fa-trash-alt" />
             </button>
           </div>
         </div>
