@@ -16,6 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			contacts: [],
+			
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -42,9 +43,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ demo: demo });
 			},
 
-			/*getContacts () => {
-				fetch ('https://playground.4geeks.com/apis/fake/contact/agenda/sprdesign')
-			}*/
+			
 			getContacts: () => {
 
 				fetch("https://playground.4geeks.com/apis/fake/contact/agenda/sprdesign")
@@ -105,15 +104,33 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => {
 						console.log(data);
-						getActions().getContacts();
+						actions.getContacts();
 					})
 					.catch(error => {
 						console.log(error);
 					});
 			},
-
-
-
+			
+			editContact: (contactId, contactData) => {
+				fetch(`https://playground.4geeks.com/apis/fake/contact/${contactId}`, {
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(contactData),
+				})
+				.then(resp => {
+					if (resp.ok) {
+						getActions().getContacts();
+					} else {
+						console.error("Error al actualizar el contacto. Estado:", resp.statusText);
+					}
+				})
+				.catch(error => {
+					console.error("Error updating contact:", error);
+				});
+			},
+			
 		},
 	}
 };

@@ -11,7 +11,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 import { AddContact } from "./views/addContact";
-import ContactCard from "./component/ContactCard";
+import {EditContact} from "./views/editContact";
 
 //create your first component
 const Layout = () => {
@@ -29,7 +29,8 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						
 						<Route path="/AddContact" element={<AddContact />} />
-
+						<Route path="/EditContact/:contactId" element={<EditContact />} />
+ 
 						<Route path="*" element={<h1>Not found!</h1>} />
 						
 					</Routes>

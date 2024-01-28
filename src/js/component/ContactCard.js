@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
+
 export const ContactCard = ({ contact }) => {
   const { full_name, email, address, phone } = contact;
   const { actions } = useContext(Context);
@@ -9,7 +10,7 @@ export const ContactCard = ({ contact }) => {
     <div className="contact-card col-xl-4 col-sm-6 mb-3">
       <div className="bg-white rounded py-4 px-4 contact-card-border">
         <div className="text-center">
-          
+
           <div class="image-circle">
             <div class="profile-icon-container" >
               <img
@@ -21,7 +22,7 @@ export const ContactCard = ({ contact }) => {
             </div>
           </div>
           <h5 className="mb-0 ">{full_name}</h5>
-          </div>
+        </div>
 
         <div className="row mt-2  icons-margin-left ">
           <div className="col-12">
@@ -42,9 +43,10 @@ export const ContactCard = ({ contact }) => {
 
         <div className="row mt-3">
           <div className="col-md-6">
-            <button className="btn btn-primary icon-button">
+            <button className="btn btn-primary icon-button" onClick={() => actions.editContact(contact.id, contact)}>
               <i className="far fa-edit" />
             </button>
+
           </div>
           <div className="col-md-6">
             <button className="btn btn-danger icon-button" onClick={() => actions.deleteContacts(contact.id)}>
