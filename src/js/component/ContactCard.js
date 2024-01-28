@@ -20,10 +20,10 @@ export const ContactCard = ({ contact }) => {
               />
             </div>
           </div>
-          <h5 className="mb-0 custom-text-right">{full_name}</h5>
+          <h5 className="mb-0 ">{full_name}</h5>
           </div>
 
-        <div className="row mt-3  icons-margin-left ">
+        <div className="row mt-2  icons-margin-left ">
           <div className="col-12">
             <div className="d-flex mb-2">
               <i className="fas fa-at mr-2 icons"></i>

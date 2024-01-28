@@ -74,8 +74,8 @@ h3 {
 
   .image-circle {
     justify-content: center;
-     width: 100px;
-     height: 100px;
+     width: 120px;
+     height: 120px;
      border-radius: 50%;
      border-top: 2px solid #fafaf9; 
      border-right: 2px solid#fffefd; 
@@ -101,6 +101,18 @@ h3 {
  }
 
 
+ h5 {
+    
+        font-family: "Satisfy", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: #9f7928;
+        text-align: end;
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+      
+ }
 
 
 
