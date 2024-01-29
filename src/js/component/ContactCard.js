@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-
+import { Link } from "react-router-dom";
 
 export const ContactCard = ({ contact }) => {
   const { full_name, email, address, phone } = contact;
@@ -11,8 +11,8 @@ export const ContactCard = ({ contact }) => {
       <div className="bg-white rounded py-4 px-4 contact-card-border">
         <div className="text-center">
 
-          <div class="image-circle">
-            <div class="profile-icon-container" >
+          <div className="image-circle">
+            <div className="profile-icon-container" >
               <img
                 src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/unknown-512.png"
                 alt="profile-icon"
@@ -43,9 +43,10 @@ export const ContactCard = ({ contact }) => {
 
         <div className="row mt-3">
           <div className="col-md-6">
-            <button className="btn btn-primary icon-button" onClick={() => actions.editContact(contact.id)}>
+            <Link to={`/EditContact/${contact.id}`}><button className="btn btn-primary icon-button" >
               <i className="far fa-edit" />
             </button>
+            </Link> 
 
           </div>
           <div className="col-md-6">

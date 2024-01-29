@@ -1,6 +1,7 @@
 body {
     width: 900px;
     margin: auto;
+   /* background-image: url('../img/background-gold-white-lines.jpg');*/
     background-image: url(https://img.freepik.com/vector-gratis/estilo-3d-que-fluye-fondo-ondulado-blanco-dorado_1017-26584.jpg?w=740&t=st=1706367046~exp=1706367646~hmac=715d4650e0a80b583efd8a60ad7cfa6638c4dd0b9b7d1a7f200d943c0d528f4f);
     background-size: cover;
     background-repeat: no-repeat;

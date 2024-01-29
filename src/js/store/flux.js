@@ -120,9 +120,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					body: JSON.stringify(contactData),
 				})
 				.then(resp => {
-					if (resp.ok) {
-						getActions().getContacts();
-					} 
+					if (!resp.ok) throw Error(resp.statusText);
+						return resp.json();
+				})
+				.then(data => {
+					console.log(data);
+					getActions().getContacts();
 				})
 				.catch(error => {
 					console.error("Error", error);
