@@ -43,7 +43,7 @@ export const ContactCard = ({ contact }) => {
 
         <div className="row mt-3">
           <div className="col-md-6">
-            <button className="btn btn-primary icon-button" onClick={() => actions.editContact(contact.id, contact)}>
+            <button className="btn btn-primary icon-button" onClick={() => actions.editContact(contact.id)}>
               <i className="far fa-edit" />
             </button>
 

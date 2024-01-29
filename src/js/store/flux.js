@@ -104,15 +104,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => {
 						console.log(data);
-						actions.getContacts();
+						getActions().getContacts();
 					})
 					.catch(error => {
 						console.log(error);
 					});
 			},
 			
-			editContact: (contactId, contactData) => {
-				fetch(`https://playground.4geeks.com/apis/fake/contact/${contactId}`, {
+			editContact: (id, contactData) => {
+				fetch(`https://playground.4geeks.com/apis/fake/contact/${id}`, {
 					method: "PUT",
 					headers: {
 						"Content-Type": "application/json",
@@ -122,12 +122,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(resp => {
 					if (resp.ok) {
 						getActions().getContacts();
-					} else {
-						console.error("Error al actualizar el contacto. Estado:", resp.statusText);
-					}
+					} 
 				})
 				.catch(error => {
-					console.error("Error updating contact:", error);
+					console.error("Error", error);
 				});
 			},
 			

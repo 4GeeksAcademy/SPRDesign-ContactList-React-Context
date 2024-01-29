@@ -58,8 +58,8 @@ export const AddContact = () => {
                     }} required />
                 </div>
 
-
-                <button type="submit" lang="en">{contactData.id ? "Update Contact" : "Add Contact"}</button>
+{/* Expresión ternaria que dice si contact.id existe o tiene un valor. Si tiene un valor se mostrará "Update Contact".Sino, se mostrará "Add Contact"*/}
+                <button type="submit">{contactData.id ? "Update Contact" : "Add Contact"}</button>
             </form>
         </div>
     );

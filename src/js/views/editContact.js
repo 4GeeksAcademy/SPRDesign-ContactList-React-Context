@@ -16,7 +16,7 @@ export const EditContact = () => {
     });
 
     useEffect(() => {
-        const contactData = store.contacts.find((c) => c.id === parseInt(params.contactId));
+        const contactData = store.contacts.find((c) => c.id === parseInt(params.id));
         if (contactData) {
             setContact(contactData);
         }
@@ -29,7 +29,7 @@ export const EditContact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        actions.editContact(params.contactId, contact);
+        actions.editContact(params.id, contact);
 
         navigate("/");
     };
@@ -78,7 +78,12 @@ export const EditContact = () => {
                     />
                 </div>
 
-                <button type="submit">{contact.id ? "Update Contact" : "Add Contact"}</button>
+                <button type="submit"> 
+                    {/* Expresión ternaria que dice si contact.id existe o tiene un valor. Si tiene un valor se mostrará "Update Contact".Sino, se mostrará "Add Contact" */}
+                    {contact.id ? "Update Contact" : "Add Contact"}
+                </button>
+
+
             </form>
         </div>
     );
